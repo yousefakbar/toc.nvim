@@ -1,6 +1,12 @@
 local M = {}
 local v = vim.api
 
+-- Make sure this module is only ever read once
+if vim.g.loaded_toc then
+  return
+end
+vim.g.loaded_toc = true
+
 M.setup = function()
   vim.cmd([[
     augroup TocCommand
