@@ -1,6 +1,6 @@
 # Overview
 
-`yousefakbar-toc.nvim` is a Neovim plugin that allows users to navigate Markdown headings in the current buffer using a Telescope picker. With this plugin, you can quickly jump to any heading in your document, enhancing productivity and ease of navigation.
+`toc.nvim` is a Neovim plugin that allows users to navigate Markdown headings in the current buffer using a Telescope picker. With this plugin, you can quickly jump to any heading in your document, enhancing productivity and ease of navigation.
 
 # Features
 
