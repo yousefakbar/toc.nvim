@@ -49,7 +49,3 @@ Currently, the plugin requires no additional configuration. However, you can ext
 # Contributing
 
 Feel free to contribute to this project! Submit issues or pull requests on the [GitHub repository](https://github.com/yousefakbar/toc.nvim) (replace with actual URL if applicable).
-
----
-
-Enjoy seamless navigation in your Markdown files with `yousefakbar-toc.nvim`! 🎉
