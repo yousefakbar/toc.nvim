@@ -8,12 +8,7 @@ end
 vim.g.loaded_toc = true
 
 M.setup = function()
-  vim.cmd([[
-    augroup TocCommand
-      autocmd!
-      autocmd FileType markdown command! Toc :lua require('toc').TOC()
-    augroup END
-  ]])
+  vim.cmd[[command Toc :lua require('toc').TOC()]]
 end
 
 -- `get_headings` scans and returns a table of headings found in `lines`

@@ -20,10 +20,12 @@ To install the plugin using [lazy.nvim](https://github.com/folke/lazy.nvim), add
 
 ```lua
 {
-    'yousefakbar/toc.nvim',
-    config = function()
-        require('toc').setup()
-    end
+    "yousefakbar/toc.nvim",
+    ft = "markdown",
+    opts = {},
+    keys = { -- Optional if you want to define a keymap to launch :Toc
+        { "<leader>mc", "<CMD>Toc<CR>", desc = "Table of contents" },
+    },
 }
 ```
 
