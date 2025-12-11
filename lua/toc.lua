@@ -18,7 +18,7 @@ local get_headings_cur_buf = function()
   for i, line in ipairs(lines) do
     local hlvl, htxt = string.match(line, "^(#+) (.*)$")
     if hlvl then
-      table.insert(headings, { title = htxt, line = i, level = hlvl })
+      table.insert(headings, { title = string.rep('  ', #hlvl-1) .. htxt, line = i, level = #hlvl })
     end
   end
   return headings
@@ -27,6 +27,10 @@ end
 local dispatch_telescope_headings = function(headings, win)
   local opts = {
     prompt_title = "📖 Select Heading",
+    sorting_strategy = "ascending",
+    layout_config = {
+      prompt_position = "top",
+    },
     finder = require('telescope.finders').new_table({
       results = vim.tbl_map(function(heading) return heading.title end, headings)  -- Map titles to the results list
     }),
